@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ingenious Labs</title>
+  <style>
+    :root {
+      --verde-oscuro: #3a5a40;
+      --verde-suave: #a3b18a;
+      --fondo-claro: #fefefb;
+      --texto-oscuro: #1c1c1c;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--fondo-claro);
+      color: var(--texto-oscuro);
+    }
+    header {
+      background-color: var(--verde-oscuro);
+      padding: 1rem 2rem;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    header img {
+      height: 128px;
+    }
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    section.hero {
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, var(--verde-oscuro), #344e41);
+      color: white;
+      text-align: center;
+    }
+    section.hero h2 {
+      font-size: 2.5rem;
+    }
+    section.hero p {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      padding: 3rem 2rem;
+    }
+    .product-card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-decoration: none;
+      color: inherit;
+    }
+    .product-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+    }
+    .product-card h3 {
+      margin-top: 0;
+    }
+    footer {
+      background: var(--verde-oscuro);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="assets/logo.png" alt="Ingenious Labs Logo">
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+      <a href="mision-vision.html">Misión y Visión</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Soluciones Inteligentes para un Futuro Conectado</h2>
+    <p>IA, visión por computador, animación 3D y más para empresas modernas.</p>
+  </section>
+
+
+  <section>
+    <h2 style="text-align: center; color: #3a5a40;">Descubre Ingenious Labs en acción</h2>
+    <video width="100%" autoplay muted loop playsinline style="border-radius: 12px; margin-top: 1rem;">
+      <source src="assets/video.mp4" type="video/mp4">
+      Tu navegador no admite la reproducción de video.
+    </video>
+  </section>
+
+
+  <section class="products" id="productos">
+    <a class="product-card" href="neurocam.html">
+      <img src="assets/neurocam.png" alt="NeuroCam Vision">
+      <h3>NeuroCam Vision</h3>
+      <p>Monitoreo en tiempo real con reconocimiento facial, placas y objetos. Seguridad con visión por IA.</p>
+    </a>
+    <a class="product-card" href="synthmind.html">
+      <img src="assets/synthmind.png" alt="SynthMind AI">
+      <h3>SynthMind AI</h3>
+      <p>Respuestas inteligentes a documentos internos con IA. Perfecto para soporte o legal.</p>
+    </a>
+    <a class="product-card" href="fractamotion.html">
+      <img src="assets/fractamotion.png" alt="FractaMotion Studio">
+      <h3>FractaMotion Studio</h3>
+      <p>Animaciones 3D personalizadas con IA, ideal para educación, videojuegos y branding.</p>
+    </a>
+    <a class="product-card" href="nerviot.html">
+      <img src="assets/nerviot.png" alt="NervIoT">
+      <h3>NervIoT</h3>
+      <p>Plataforma IoT para monitoreo ambiental y automatización industrial con sensores conectados.</p>
+    </a>
+  </section>
+
+  <footer id="contacto">
+    <p>Contacto: proyectos@ingeniouslabs.co | +57 316 828 6301</p>
+    <p>&copy; 2025 Ingenious Labs</p>
+  </footer>
+</body>
+</html>
