@@ -136,8 +136,59 @@
   </style>
 </head>
 <body>
-  <!-- ...contenido anterior intacto... -->
 
+  <!-- ✅ Contenido principal -->
+  <header>
+    <img src="assets/logo.png" alt="Ingenious Labs Logo">
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#contacto">Contacto</a>
+      <a href="mision-vision.html">Misión y Visión</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Soluciones Inteligentes para un Futuro Conectado</h2>
+    <p>IA, visión por computador, animación 3D y más para empresas modernas.</p>
+  </section>
+
+  <section>
+    <h2 style="text-align: center; color: #3a5a40;">Descubre Ingenious Labs en acción</h2>
+    <video width="100%" autoplay muted loop playsinline style="border-radius: 12px; margin-top: 1rem;">
+      <source src="assets/video.mp4" type="video/mp4">
+      Tu navegador no admite la reproducción de video.
+    </video>
+  </section>
+
+  <section class="products" id="productos">
+    <a class="product-card" href="neurocam.html">
+      <img src="assets/neurocam.png" alt="NeuroCam Vision">
+      <h3>NeuroCam Vision</h3>
+      <p>Monitoreo en tiempo real con reconocimiento facial, placas y objetos. Seguridad con visión por IA.</p>
+    </a>
+    <a class="product-card" href="synthmind.html">
+      <img src="assets/synthmind.png" alt="SynthMind AI">
+      <h3>SynthMind AI</h3>
+      <p>Respuestas inteligentes a documentos internos con IA. Perfecto para soporte o legal.</p>
+    </a>
+    <a class="product-card" href="fractamotion.html">
+      <img src="assets/fractamotion.png" alt="FractaMotion Studio">
+      <h3>FractaMotion Studio</h3>
+      <p>Animaciones 3D personalizadas con IA, ideal para educación, videojuegos y branding.</p>
+    </a>
+    <a class="product-card" href="nerviot.html">
+      <img src="assets/nerviot.png" alt="NervIoT">
+      <h3>NervIoT</h3>
+      <p>Plataforma IoT para monitoreo ambiental y automatización industrial con sensores conectados.</p>
+    </a>
+  </section>
+
+  <footer id="contacto">
+    <p>Contacto: proyectos@ingeniouslabs.co | +57 316 828 6301</p>
+    <p>&copy; 2025 Ingenious Labs</p>
+  </footer>
+
+  <!-- ✅ Widget del Chat -->
   <div id="chat-widget">
     <button id="toggle-chat-btn" onclick="toggleChat()">💬 ¿Necesitas ayuda?</button>
     <div id="chat-box">
