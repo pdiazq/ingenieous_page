@@ -199,29 +199,28 @@
       </div>
     </div>
   </div>
-
   <script>
     function toggleChat() {
       const box = document.getElementById("chat-box");
       box.style.display = box.style.display === "none" || box.style.display === "" ? "flex" : "none";
     }
-
+  
     async function sendMessage() {
       const input = document.getElementById("user-input");
       const msg = input.value.trim();
       if (!msg) return;
-
+  
       const messagesDiv = document.getElementById("messages");
       messagesDiv.innerHTML += `<div><b>Tú:</b> ${msg}</div>`;
       input.value = "";
-
+  
       try {
         const res = await fetch("https://chatapi-43mg.onrender.com/chat", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ message: msg })
         });
-
+  
         const data = await res.json();
         messagesDiv.innerHTML += `<div><b>Bot:</b> ${data.response}</div>`;
         messagesDiv.scrollTop = messagesDiv.scrollHeight;
@@ -229,6 +228,14 @@
         messagesDiv.innerHTML += `<div><b>Bot:</b> Error al contactar el servidor.</div>`;
       }
     }
+  
+    // ✅ Permitir enviar con la tecla Enter
+    document.getElementById("user-input").addEventListener("keydown", function(event) {
+      if (event.key === "Enter") {
+        event.preventDefault(); // evita saltos de línea
+        sendMessage();
+      }
+    });
   </script>
 </body>
 </html>
